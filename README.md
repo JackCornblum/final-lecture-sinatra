@@ -13,6 +13,16 @@ In today's exercise, we'll be building out a doctor - patient - appointment doma
 - [Sinatra Documentation](http://sinatrarb.com/intro.html)
 - [ActiveRecord to_json docs](https://apidock.com/rails/ActiveRecord/Serialization/to_json)
 
+## Instructions
+
+- A high level description of your tasks is below. 
+- Each section is test driven with a separate test file. 
+- You can run `rspec --f-f` to progress through the tests.  
+- Consult test errors as you go 
+- After completing part 2, you can use `tux` to interact with your models and seeded data
+- While working through part 3, you can use `binding.pry` within your routes to pause the tests in the middle of a request so you can poke around and see what's going on. 
+- At this point, if you've run your seeds, you should also be able to use these functions to test out your API: [Sinatra API Testing](https://hackmd.io/@dlm/testing-your-sinatra-api)
+
 ## 1. Models & Migrations
 
 There are 3 classes and tables you'll need to create:
