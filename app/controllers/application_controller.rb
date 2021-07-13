@@ -95,4 +95,26 @@ class ApplicationController < Sinatra::Base
     appointment.to_json(include: [:patient, :doctor])
   end
 
+  get "/doctors/:id/appointments" do 
+    doctor = Doctor.find(params[:id])
+    if doctor
+      doctor.appointments.to_json(include: [:patient])
+    else
+      {error: "Doctor not found"}.to_json
+    end
+  end
+
+  post "/doctors/:id/appointments" do 
+    doctor = Doctor.find(params[:id])
+    if doctor
+      appointment = doctor.appointments.create(
+        time: params[:time],
+        patient_id: params[:patient_id]
+      )
+      appointment.to_json(include: [:patient, :doctor])
+    else
+      {error: "Doctor not found"}.to_json
+    end
+  end
+
 end

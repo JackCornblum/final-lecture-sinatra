@@ -66,4 +66,29 @@ Patient.last.doctors
 
 ## 3. Build out API endpoints to implement CRUD
 
+You'll be implementing CRUD for all 3 models. For testing purposes, all routes must be defined within the `app/controllers/application_controller.rb` file. 
 
+- `Doctor`
+  - get '/doctors'
+  - post '/new_doctor'
+  - patch '/doctors/:id'
+  - delete '/doctors/:id'
+- `Patient`
+  - get '/patients'
+  - post '/new_patient'
+  - patch '/patients/:id'
+  - delete '/patients/:id'
+- `Appointment`
+  - get '/appointments'
+  - post '/new_appointment'
+  - patch '/appointments/:id'
+  - delete '/appointments/:id'
+  
+
+## 4. Advanced Deliverables
+
+- get '/doctors/:id/appointments'
+- post '/doctors/:id/appointments'
+- get '/patients/:id/appointments'
+- post '/patients/:id/appointments'
+- get '/doctors_by_specialization/:specialization'

@@ -5,6 +5,4 @@ if ActiveRecord::Base.connection.migration_context.needs_migration?
 end
 
 use Rack::JSONBodyParser
-use AppointmentsController
-use DoctorsController
 run ApplicationController
