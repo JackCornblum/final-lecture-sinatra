@@ -10,7 +10,7 @@ RSpec.describe "Models & Migrations" do
       expect(Doctor.superclass).to eq(ActiveRecord::Base)
     end
 
-    it "has column names" do 
+    it "has columns called 'name', 'specialization'" do 
       expect(Doctor.column_names).to include("id", "name", "specialization")
     end
   end
@@ -24,7 +24,7 @@ RSpec.describe "Models & Migrations" do
       expect(Patient.superclass).to eq(ActiveRecord::Base)
     end
 
-    it "has column names" do 
+    it "has a column called 'name'" do 
       expect(Patient.column_names).to include("id", "name")
     end
   end
@@ -38,8 +38,12 @@ RSpec.describe "Models & Migrations" do
       expect(Appointment.superclass).to eq(ActiveRecord::Base)
     end
 
-    it "has column names" do 
+    it "has columns called 'time', 'patient_id', 'doctor_id'" do 
       expect(Appointment.column_names).to include("id", "time", "patient_id", "doctor_id")
+    end
+
+    it "has a time that's a string type column" do 
+      expect(Appointment.columns.find{|c| c.name == "time"}.try(:type)).to eq(:string)
     end
   end
 

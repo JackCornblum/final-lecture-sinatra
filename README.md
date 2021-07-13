@@ -6,6 +6,13 @@ In today's exercise, we'll be building out a doctor - patient - appointment doma
 2. Seed Data & Test Relationships in Console
 3. Build out API endpoints to implement CRUD
 
+### Resources:
+
+- [Sinatra API CRUD Reference](https://hackmd.io/@dlm/sinatra-crud-cheatsheet)
+- [Sinatra API Testing](https://hackmd.io/@dlm/testing-your-sinatra-api)
+- [Sinatra Documentation](http://sinatrarb.com/intro.html)
+- [ActiveRecord to_json docs](https://apidock.com/rails/ActiveRecord/Serialization/to_json)
+
 ## 1. Models & Migrations
 
 There are 3 classes and tables you'll need to create:
@@ -16,7 +23,7 @@ There are 3 classes and tables you'll need to create:
 - Patient
   - name
 - Appointment
-  - time
+  - time (as a string)
   - doctor_id
   - patient_id
 
